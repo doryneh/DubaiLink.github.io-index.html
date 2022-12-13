@@ -1,0 +1,102 @@
+@font-face {
+    font-family: avertastd;
+    src: url(../fonts/AvertaStd-Regular.ttf);
+}
+
+body {
+    font-size: avertastd !important;
+}
+
+/**********
+Sign In
+***********/
+
+section.signIn input {
+    border-radius: 20px;
+    padding: 10px 20px;
+    border: 1.5px solid #7A8FA6;
+    font-size: 16px;
+}
+section.signIn h3.SignInText{
+    color: #1E3D54;
+    font-weight: 400 ;
+}
+
+section.signIn input::placeholder {
+    /* Chrome, Firefox, Opera, Safari 10.1+ */
+    color: #7A8FA6;
+    opacity: 1;
+    /* Firefox */
+}
+
+section.signIn input:-ms-input-placeholder {
+    /* Internet Explorer 10-11 */
+    color: #7A8FA6;
+}
+
+section.signIn input::-ms-input-placeholder {
+    /* Microsoft Edge */
+    color: #7A8FA6;
+}
+Section.signIn .position-relative svg.fa-eye {
+    position: absolute;
+    top: 50%;
+    right: 5%;
+    transform: translate(-50%, -50%);
+    font-size: 20px;
+    color: #7A8FA6;
+}
+Section.signIn   button.btn-primary,Section.signIn   button.btn-danger{
+    width: 100%;
+    padding: 10px;
+    border: none;
+    font-size: 16px;
+}
+Section.signIn   button.btn-primary{
+    background-color: #37D7AF;
+    border-radius: 20px;
+    border: 1.5px solid #37D7AF;
+}
+Section.signIn   button.btn-primary:hover{
+    background-color: transparent;
+    color: #37D7AF;
+}
+Section.signIn   button.btn-danger{
+    background-color: transparent;
+    color: #37D7AF; 
+    font-weight: 600;
+    padding: 10px 0px;
+}
+Section.signIn   button.btn-danger:hover{
+    color: #31bb98;
+}
+Section.signIn   .greyline{
+    height: 1px;
+    width: 100%;
+    background-color:  #7A8FA6;
+    
+}
+Section.signIn .Or {
+    font-size: 15px;
+    color: #7A8FA6;
+}
+Section.signIn h5.noAccText{
+    color: #7A8FA6;
+    font-weight: 400;
+    font-size: 15px;
+}
+Section.signIn button{
+    box-shadow: none !important;
+}
+Section.signIn button.btn-secondary{
+    background-color: transparent;
+    color: #009EEC;
+    font-size: 16px;
+    border-radius: 30px;
+    border: 1.5px solid #009EEC;
+    padding: 10px 0;
+}
+Section.signIn button.btn-secondary:hover{
+    background-color: #009EEC ;
+    color: white;
+}
