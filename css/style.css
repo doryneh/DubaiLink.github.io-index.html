@@ -117,13 +117,23 @@ section.CarouselPart  .carousel .carousel-inner .carousel-item .carouselImageTex
 
 }
 
-.carouselImageText h1 {
+
+section.CarouselPart  .carousel .carousel-inner .carousel-item  .carouselImageText h1 {
     font-size: 70px;
     text-transform: uppercase;
     line-height: 89px;
     font-family: DosisSemiBold;
+    padding-left: 20px;
 }
-
+section.CarouselPart  .carousel .carousel-inner .carousel-item  .carouselImageText p {
+    font-size: 30px;
+    text-transform: lowercase;
+    line-height: 40px;
+    font-family: Neris-Light;
+    padding-left: 20px;
+   font-weight: 400;
+   opacity: 80%;
+}
 /********
 *********
 End Carousel
