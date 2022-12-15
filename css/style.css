@@ -9,10 +9,25 @@
     src: url(../fonts/Dosis/Dosis-SemiBold.ttf);
 }
 
+
+@keyframes circle-in-top-right {
+    from {
+      clip-path: circle(0% at right center);
+    }
+    to {
+      clip-path: circle(200% at left center);
+    }
+  }
+  
+  [transition-style="in:circle:right-center"] {
+    animation: 2.5s cubic-bezier(.25, 1, .30, 1) circle-in-top-right both;
+  }
+ 
+
 body {
     direction: ltr;
     font-family: Neris-Light !important;
-
+  
 }
 
 /********
@@ -20,6 +35,11 @@ body {
 Navbar
 *********
 **********/
+#wraper{
+    background-position: top;
+    background-size: 100vw 100vh !important;
+    background-repeat: no-repeat;
+}
 
 nav.navbar {
     background-color: transparent;
@@ -69,71 +89,193 @@ section.CarouselPart .carousel .carousel-inner .carousel-item {
     background-position: top;
     background-size: 100vw 100vh !important;
     background-repeat: no-repeat;
-
+    transition: 0s ease-out all;
+}
+section.CarouselPart .carousel .carousel-inner .carousel-item.active{
+    animation-name: circle-in-top-right ;
+    animation-duration:3s;
 }
 
-section.CarouselPart .carousel .carousel-inner .carousel-item .overlay {
+section.CarouselPart .carousel .carousel-inner .carousel-item .overlay,#wraper .overlay {
     background-image: url(../images/OVERLAY.png);
     width: 100vw;
     height: 100vh;
     display: flex;
     align-items: center;
+ 
 }
 
-section.CarouselPart .carousel .carousel-inner .carousel-item.carousel-item-one {
+#carousel-item-one,.three {
     background-image: url(../images/Home1.png);
+   
 }
 
 
-section.CarouselPart .carousel .carousel-inner .carousel-item.carousel-item-Two {
+#carousel-item-Two,.four {
     background-image: url(../images/Dubailinktravel.png);
 }
 
 
-section.CarouselPart .carousel .carousel-inner .carousel-item.carousel-item-Three {
+#carousel-item-Three, .five {
     background-image: url(../images/GTE.png);
 }
 
-section.CarouselPart .carousel .carousel-inner .carousel-item.carousel-item-Four {
+#carousel-item-Four,.six {
     background-image: url(../images/RoyalLifestyl.png);
 }
 
-section.CarouselPart .carousel .carousel-inner .carousel-item.carousel-item-Five {
+#carousel-item-Five,.seven {
     background-image: url(../images/STS.png);
 }
 
-section.CarouselPart .carousel .carousel-inner .carousel-item.carousel-item-Six {
+#carousel-item-Six,.one {
     background-image: url(../images/tripstick.png);
 }
 
-section.CarouselPart .carousel .carousel-inner .carousel-item.carousel-item-Seven {
+#carousel-item-Seven,.two {
     background-image: url(../images/NIU.png);
 }
 
 
-section.CarouselPart  .carousel .carousel-inner .carousel-item .carouselImageText {
+section.CarouselPart .carousel .carousel-inner .carousel-item .carouselImageText {
     z-index: 3;
     color: white;
-
 }
 
 
-section.CarouselPart  .carousel .carousel-inner .carousel-item  .carouselImageText h1 {
+section.CarouselPart .carousel .carousel-inner .carousel-item .carouselImageText h1 {
     font-size: 70px;
     text-transform: uppercase;
     line-height: 89px;
     font-family: DosisSemiBold;
     padding-left: 20px;
+    animation: fadeIn 5s;
+    
 }
-section.CarouselPart  .carousel .carousel-inner .carousel-item  .carouselImageText p {
+
+section.CarouselPart .carousel .carousel-inner .carousel-item .carouselImageText p {
     font-size: 30px;
-    text-transform: lowercase;
     line-height: 40px;
     font-family: Neris-Light;
     padding-left: 20px;
-   font-weight: 400;
-   opacity: 80%;
+    font-weight: 400;
+    opacity: 80%;
+    animation: fadeIn 5s;
+     
+
 }
+
+section.CarouselPart .carousel .carousel-inner .carousel-item .carousel-caption {
+    width: 20%;
+    height: 25%;
+    right: 50%;
+    transform: translateX(50%);
+    left: unset;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.205);
+    display: flex !important;
+    flex-direction: column;
+    align-items: center;
+    justify-content: end;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    padding-bottom: 0;
+}
+
+section.CarouselPart .carousel .carousel-inner .carousel-item .carousel-caption p {
+    font-size: 14px;
+    font-family: Neris-Light;
+    font-weight: 400;
+    opacity: 80%;
+    margin-top: 10px;
+}
+
+section.CarouselPart .carousel .carousel-inner .carousel-item .carousel-caption .down {
+    width: 20px;
+}
+
+section.CarouselPart .carousel .carousel-inner .carousel-item .carousel-caption img {
+    width: 30%;
+    object-fit: cover;
+}
+
+section.CarouselPart .carousel .carousel-control-prev {
+    right: 0 !important;
+    left: unset;
+    top: 50%;
+    height: 50px;
+}
+
+section.CarouselPart .carousel .carousel-control-prev p, section.CarouselPart .carousel .carousel-control-next p {
+    display: none;
+}
+
+section.CarouselPart .carousel .carousel-control-prev:hover img, section.CarouselPart .carousel .carousel-control-next:hover img {
+    display: none;
+}
+
+section.CarouselPart .carousel .carousel-control-prev:hover p, section.CarouselPart .carousel .carousel-control-next:hover p {
+    display: block;
+}
+
+section.CarouselPart .carousel .carousel-control-next {
+    right: 0 !important;
+
+    top: 55%;
+    height: 50px;
+}
+
+section.CarouselPart .carousel .input-group {
+    position: absolute;
+    width: 50%;
+    top: 15%;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 10;
+}
+
+section.CarouselPart .carousel .input-group input {
+    border-radius: 6px;
+    background-color: rgba(0, 0, 0, 0.205);
+
+    color: white;
+    font-size: 16px;
+    line-height: 22px;
+    border: 1px solid rgba(255, 255, 255, 0.336);
+    padding: 10px 20px;
+}
+
+section.CarouselPart .carousel .input-group input::placeholder {
+    /* Chrome, Firefox, Opera, Safari 10.1+ */
+    color: white;
+    opacity: 0.8;
+    /* Firefox */
+}
+
+section.CarouselPart .carousel .input-group input:-ms-input-placeholder {
+    /* Internet Explorer 10-11 */
+    color: white;
+    opacity: 0.8;
+
+}
+
+section.CarouselPart .carousel .input-group input::-ms-input-placeholder {
+    /* Microsoft Edge */
+    color: white;
+    opacity: 0.8;
+}
+section.CarouselPart .carousel .input-group .inputSearch{
+    position: relative;
+}
+section.CarouselPart .carousel .input-group svg{
+    position: absolute;
+    top: 50%;
+    right: 5%;
+    font-size: 20px;
+    transform: translateY(-50%);
+    color: white;
+}
+
 /********
 *********
 End Carousel

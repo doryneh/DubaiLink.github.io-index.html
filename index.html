@@ -7,11 +7,15 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
   <link rel="stylesheet" href="assets/css/bootstrap.css">
   <link rel="stylesheet" href="assets/css/fontawesome.min.css">
+  <link rel="stylesheet" href="https://unpkg.com/transition-style">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
   <link rel="stylesheet" href="css/style.css">
   <title>Home Page</title>
 </head>
 
 <body>
+  <div class="one" id="wraper">
+    <div class="overlay">
   <!--Navbar-->
   <nav class="navbar navbar-expand-lg justify-content-between fixed-top">
     <div class="container-fluid">
@@ -46,10 +50,10 @@
 
         </ul>
         <div class="d-flex NavSocial">
-          <img src="images/facebook-app-symbol.png" alt="facebook" class="me-2">
-          <img src="images/twitter.png" alt="twitter" class="me-2">
-          <img src="images/instagram.png" alt="instagram" class="me-2">
-          <img src="images/youtube.png" alt="youtube" class="me-2">
+          <img src="images/facebook-app-symbol.png" alt="facebook" class="me-3">
+          <img src="images/twitter.png" alt="twitter" class="me-3">
+          <img src="images/instagram.png" alt="instagram" class="me-3">
+          <img src="images/youtube.png" alt="youtube" class="me-3">
         </div>
       </div>
     </div>
@@ -57,125 +61,193 @@
   <!--End Navbar-->
   <section class="CarouselPart" id="CarouselPart">
     <div class="container-fluid px-0">
-      <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
+      <div id="carouselExampleControls" class="carousel carousel-fade" data-bs-ride="carousel" data-interval="false">
         <div class="carousel-inner">
-          <div class="carousel-item carousel-item-one active">
+
+          <div class="carousel-item  active animate__animated animate__fadeOut" id="carousel-item-one">
             <div class="overlay">
               <div class="carouselImageText">
-                <h1>
+                <h1 class="animate__animated animate__fadeIn">
                   Redefending
                   <br>
                   Hospitality
-
                 </h1>
                 <p>Building the hospitality industry <br>
                   for a better future so you can <br>
 
                   discover its wonders,with us</p>
               </div>
+              <div class="carousel-caption d-none d-md-block" style="background-color: transparent;">
+                <p class="">
+                  Discover More
+                  <br>
+                  <img src="images/Dragdownarrow.png" alt="" class="down" style="transform: rotate(90deg);">
+                </p>
+              </div>
             </div>
           </div>
-          <div class="carousel-item carousel-item-Two">
+          <div class="carousel-item " id="carousel-item-Two">
             <div class="overlay">
               <div class="carouselImageText">
                 <h1>
-                  Redefending
-                  <br>
-                  Hospitality
+                  FINE <br> TRAVEL
 
                 </h1>
                 <p>Experience unforgettable <br>
                   holiday at the best rates </p>
               </div>
-            </div>
-          </div>
-          <div class="carousel-item carousel-item-Three">
-            <div class="overlay">
-              <div class="carouselImageText">
-                <h1>
-                  Redefending
-                  <br>
-                  Hospitality
+              <div class="carousel-caption d-none d-md-block">
 
-                </h1>
-                <p> Access a one-step solution for all  <br> your travel needs
-</p>
+                <img src="images/Component 6 – 4.png" alt="">
+
+                <p class="">
+
+                  Discover More
+                  <br>
+                  <img src="images/Dragdownarrow.png" alt="" class="down" style="transform: rotate(90deg);">
+                </p>
               </div>
             </div>
           </div>
-          <div class="carousel-item carousel-item-Four">
+          <div class="carousel-item " id="carousel-item-Three">
             <div class="overlay">
               <div class="carouselImageText">
                 <h1>
-                  Redefending
-                  <br>
-                  Hospitality
+                  FIRST-RATE <br> SOLUTION
 
                 </h1>
-                <p>Building the hospitality industry <br>
-                  for a better future so you can <br>
+                <p> Access a one-step solution for all <br> your travel needs
+                </p>
+              </div>
+              <div class="carousel-caption d-none d-md-block">
+                <img src="images/GTElogo.png " alt="">
 
-                  discover its wonders,with us</p>
+
+
+                <p class="">
+                  Discover More
+                  <br>
+                  <img src="images/Dragdownarrow.png" alt="" class="down" style="transform: rotate(90deg);">
+                </p>
+
               </div>
             </div>
           </div>
-          <div class="carousel-item carousel-item-Five">
+          <div class="carousel-item " id="carousel-item-Four">
             <div class="overlay">
               <div class="carouselImageText">
                 <h1>
-                  Redefending
-                  <br>
-                  Hospitality
+                  VIP <br> EXPERIENCE
 
                 </h1>
+                <p>Unlock a premium holiday <br>
+                  experience with exclusive golf <br>
+                  packages at special rates.</p>
+              </div>
+            </div>
+            <div class="carousel-caption d-none d-md-block">
+              <img src="images/RL_logo-final-BW (1).png" alt="RL_logo" class="w-25 h-100">
+
+              <p class="">
+                Discover More
+                <br>
+                <img src="images/Dragdownarrow.png" alt="" class="down" style="transform: rotate(90deg);">
+              </p>
+            </div>
+          </div>
+          <div class="carousel-item " id="carousel-item-Five">
+            <div class="overlay">
+              <div class="carouselImageText">
+                <h1>
+                  PREMIUM <br> SOLUTION
+
+                </h1>
+                <p>
+                  Discover smart travel solutions <br>
+                  and special travel products.
+                </p>
+              </div>
+              <div class="carousel-caption d-none d-md-block">
+                <img src="images/STSLOGO.png" alt="STSLOGO">
+
+
+                <p class="">
+                  Discover More
+                  <br>
+                  <img src="images/Dragdownarrow.png" alt="" class="down" style="transform: rotate(90deg);">
+                </p>
               </div>
             </div>
           </div>
-          <div class="carousel-item carousel-item-Six">
+          <div class="carousel-item " id="carousel-item-Six">
             <div class="overlay">
               <div class="carouselImageText">
                 <h1>
-                  Redefending
-                  <br>
-                  Hospitality
+                  TOP-NOTCH <br> BOOKING
 
                 </h1>
-                <p>Building the hospitality industry <br>
-                  for a better future so you can <br>
+                <p>Dig into a process of searching, <br>
+                  comparing, and booking hotels.</p>
+              </div>
+              <div class="carousel-caption d-none d-md-block">
+                <img src="images/tripstickLogo.png" alt="tripstickLogo">
 
-                  discover its wonders,with us</p>
+
+                <p class="">
+                  Discover More
+                  <br>
+                  <img src="images/Dragdownarrow.png" alt="" class="down" style="transform: rotate(90deg);">
+                </p>
               </div>
             </div>
           </div>
-          <div class="carousel-item carousel-item-Seven">
+          <div class="carousel-item " id="carousel-item-Seven">
             <div class="overlay">
               <div class="carouselImageText">
                 <h1>
-                  Redefending
+                  LUXURIOUS
                   <br>
-                  Hospitality
+                  STAY
 
                 </h1>
-                <p>Building the hospitality industry <br>
-                  for a better future so you can <br>
+                <p>Enjoy a warm ambience, great <br>
+                  facilities, and positive vibes.</p>
+              </div>
+              <div class="carousel-caption d-none d-md-block">
+                <img src="images/NIULOGO.png" alt="tripstickLogo">
 
-                  discover its wonders,with us</p>
+                <p class="">
+                  Discover More
+                  <br>
+                  <img src="images/Dragdownarrow.png" alt="" class="down" style="transform: rotate(90deg);">
+                </p>
               </div>
             </div>
           </div>
         </div>
+        <div class="input-group mx-auto">
+          <div class="inputSearch w-100">
+            <input type="search" class="form-control " placeholder="Search for your favorite destinations & packages"
+              aria-label="search" aria-describedby="basic-addon1">
+            <i class="fa-solid fa-magnifying-glass"></i>
+          </div>
+        </div>
         <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls"
-          data-bs-slide="prev">
+          data-bs-slide="next">
           <img src="images/Dragdownarrow.png" alt="">
+          <p class="mb-0">Next</p>
         </button>
         <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls"
-          data-bs-slide="next">
+          data-bs-slide="prev">
           <img src="images/Dragdownarrow.png" alt="" style="transform:rotate(180deg);">
+          <p class="mb-0">Prev</p>
 
         </button>
       </div>
     </div>
   </section>
+</div>
+</div>
 </body>
 
 <script src="assets/js/jquery-3.6.1.min.js"></script>
