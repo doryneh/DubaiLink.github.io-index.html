@@ -106,12 +106,84 @@ $(".carousel-control-next").click(function () {
    };
 });
 
-
+/*Navbar effect*/
 $(window).scroll(function () {
    if ($(this).scrollTop() >= 0) {
      $("nav.navbar").addClass("blackNav");
+     $(".Logo").css("filter", " unset");
+
    } 
    if ($(this).scrollTop() == 0) {
      $("nav.navbar").removeClass("blackNav");
+     $(".Logo").css("filter", "  brightness(0) invert(1)");
+
    }
  });
+
+ /*Scroll Effect*/
+ $(document).ready(function () {
+
+ function PinkSeperatorAnim() {
+   var reveals = document.querySelectorAll("p.Description,h4.TitleDescription,.PhotoDescription img");
+ 
+   for (var i = 0; i < reveals.length; i++) {
+     var windowHeight = window.innerHeight;
+     var elementTop = reveals[i].getBoundingClientRect().top;
+     var elementVisible = 150;
+ 
+     if (elementTop < windowHeight - elementVisible) {
+       reveals[i].classList.add("animated");
+     } else {
+       reveals[i].classList.remove("animated");
+     }
+   }
+ }
+ 
+ window.addEventListener("scroll", PinkSeperatorAnim);    
+});
+/*Map Hover*/
+
+jQuery('.MapIndex0').mouseenter(function () {
+   jQuery('.DetailsOne').css({ "display": "block" });
+});
+jQuery('.MapIndex0').mouseleave(function () {
+jQuery('.DetailsOne').css({ "display": "none" });
+});
+
+jQuery('.MapIndex1').mouseenter(function () {
+       jQuery('.DetailsTwo').css({ "display": "block" });
+});
+jQuery('.MapIndex1').mouseleave(function () {
+   jQuery('.DetailsTwo').css({ "display": "none" });
+});
+
+jQuery('.MapIndex2').mouseenter(function () {
+   jQuery('.DetailsThree').css({ "display": "block" });
+});
+jQuery('.MapIndex2').mouseleave(function () {
+jQuery('.DetailsThree').css({ "display": "none" });
+});
+
+jQuery('.MapIndex3').mouseenter(function () {
+   jQuery('.DetailsFour').css({ "display": "block" });
+});
+jQuery('.MapIndex3').mouseleave(function () {
+jQuery('.DetailsFour').css({ "display": "none" });
+});
+
+jQuery('.MapIndex4').mouseenter(function () {
+   jQuery('.DetailsFive').css({ "display": "block" });
+});
+jQuery('.MapIndex4').mouseleave(function () {
+   jQuery('.DetailsFive').css({ "display": "none" });
+   });
+
+   jQuery('.MapIndex5').mouseenter(function () {
+      jQuery('.DetailsSix').css({ "display": "block" });
+   });
+   jQuery('.MapIndex5').mouseleave(function () {
+      jQuery('.DetailsSix').css({ "display": "none" });
+      });
+
+
+    

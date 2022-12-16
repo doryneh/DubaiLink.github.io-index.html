@@ -20,14 +20,22 @@
 [transition-style="in:circle:right-center"] {
     animation: 1s cubic-bezier(.25, 1, .30, 1) circle-in-top-right both;
 }
-
+@keyframes fadeInUp {
+    0% {
+      opacity: 0;
+      transform: translateY(40px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
 
 body {
     direction: ltr;
     font-family: Neris-Light !important;
     width: 100vw !important;
     max-width: 100%;
-    overflow-x: hidden;
 }
 
 /********
@@ -45,7 +53,9 @@ Navbar
 nav.navbar {
     background-color: transparent;
 }
-
+nav.navbar  img .Logo{
+    filter: brightness(0) invert(1);
+}
 nav.navbar.blackNav {
     background-color: #121212e5 !important;
     transition: background-color 0.5s;
@@ -347,14 +357,25 @@ section.LandingPage .PhotoDescription h4.TitleDescription, section.LandingPage .
     color: #2A7076;
     text-transform: uppercase;
     line-height: 50px;
+    opacity: 0;
+
 }
 
 section.LandingPage .PhotoDescription p.Description {
     font-size: 22px;
     color: #2A7076;
     line-height: 29px;
+    opacity: 0;
 }
+section.LandingPage .PhotoDescription img {
+    opacity: 0;
 
+}
+.animated{
+    animation: fadeInUp 0.2s linear;
+    transition: 0.1s ease all;
+    opacity: 1 !important;
+}
 /*End Photo Description */
 
 /* Informative Carousel */
@@ -386,6 +407,8 @@ section.LandingPage .infromativeSlider .carousel-cell .overlay {
     width: 90%;
     padding: 12.5px 0;
     margin: auto;
+    border-radius: 5px;
+
 }
 
 section.LandingPage .infromativeSlider .carousel-cell.is-selected .overlay {
@@ -393,45 +416,82 @@ section.LandingPage .infromativeSlider .carousel-cell.is-selected .overlay {
     transition: width 0.2s;
     transition-timing-function: linear;
     padding: 0px 0px !important;
+position: relative;
+border-radius:20px ;
 
 }
 
-section.LandingPage .infromativeSlider .carousel-cell:hover a.MoreDetails {
-    display: block;
-    border-radius: 50%;
-    background-color: rgb(255, 255, 255);
-    filter: drop-shadow(0px 3px 6px #00000029);
-    height: 70px;
-    width: 70px;
-    position: absolute;
-    top: 0;
-    left: 0;
-    z-index: 200000;
-}
+
 
 section.LandingPage .infromativeSlider .carousel-cell .overlay {
     position: relative;
+    border-radius:20px ;
 }
-
+section.LandingPage .infromativeSlider .carousel-cell.is-selected:hover .overlay{
+    background-image: linear-gradient(#00000000, rgba(0, 0, 0, 0.993));
+    z-index: 1000;
+}
 section.LandingPage .infromativeSlider .carousel-cell .overlay img {
     height: 100%;
 }
 
 section.LandingPage .infromativeSlider .carousel-cell a.MoreDetails {
-    display: none;
-    position: fixed;
+    position: absolute;
+    left: 5%;
+    bottom: 10%;
+    background-color: transparent;
+    text-decoration: none;
+}
+section.LandingPage .infromativeSlider .carousel-cell:hover a.MoreDetails button div{
+    width: 30px;
+    height: 30px;
+
+}
+section.LandingPage .infromativeSlider .carousel-cell:hover a.MoreDetails p {
+    font-size: 25px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    display: block;
+    color: white;
+}
+section.LandingPage .infromativeSlider .carousel-cell:hover a.MoreDetails button div svg{
+    transition: 0.5s ease all;
+    font-size: 15px;
 }
 
 section.LandingPage .infromativeSlider .carousel-cell a.MoreDetails button {
-    background-color: transparent;
+    background-color: transparent !important;
     border: none;
-    color: #000000;
-    font-size: 15px;
-    line-height: 21px;
-    height: 70px;
-    width: 70px;
+    color: white;
+    font-size: 25px;
+    font-weight: bold;
+    position: relative;
+    padding: 0 50px;
 }
 
+section.LandingPage .infromativeSlider .carousel-cell a.MoreDetails button div {
+    width: 5px;
+    height: 5px;
+    background-color: white;
+    border-radius: 50%;
+    margin-right: 15px;
+    transition: 0.5s ease all;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    left: 2%;
+    top: 50%;
+    transform: translate(-50%,-50%);   
+}
+section.LandingPage .infromativeSlider .carousel-cell a.MoreDetails button div svg{
+    font-size: 2px;
+    color: black;
+}
+section.LandingPage .infromativeSlider .carousel-cell a.MoreDetails p{
+    display: none;
+    transition: 1s ease all;
+}
 section.LandingPage .infromativeSlider .flickity-page-dots, .flickity-prev-next-button.next, .flickity-prev-next-button.previous {
     display: none;
 }
@@ -440,7 +500,7 @@ section.LandingPage .infromativeSlider .flickity-page-dots, .flickity-prev-next-
 
 /* Map Part */
 section.LandingPage .Map {
-    background-color: #2A7076;
+    background-color: #313131;
     opacity: 0.94;
     position: relative;
 }
@@ -451,7 +511,68 @@ section.LandingPage .Map h4.TitleDescription {
     top: 15%;
     left: 5%;
 }
+section.LandingPage .Map .MapBG {
+    width: 100%;
+    height: 100%;
 
+}
+section.LandingPage .Map .MapIndex0 {
+    top: 45%;
+    left: 50%;
+    position: absolute;
+    transform: translate(-50%,-50%);
+}
+
+section.LandingPage .Map .MapIndex1 {
+    top: 55%;
+    left: 45%;
+    position: absolute;
+    transform: translate(-50%,-50%);
+}
+section.LandingPage .Map .MapIndex2{
+    top: 53%;
+    left: 47%;
+    position: absolute;
+    transform: translate(-50%,-50%);
+}
+section.LandingPage .Map .MapIndex3 {
+    top: 57%;
+    left: 50%;
+    position: absolute;
+    transform: translate(-50%,-50%);
+}
+section.LandingPage .Map .MapIndex4 {
+    top: 52%;
+    left: 54%;
+    position: absolute;
+    transform: translate(-50%,-50%);
+}
+section.LandingPage .Map .MapIndex5 {
+    top: 60%;
+    left: 48%;
+    position: absolute;
+    transform: translate(-50%,-50%);
+}
+.Detail{
+    background-color: white;
+    border-radius: 20px ;
+    filter: drop-shadow(0px 3px 6px #00000029);
+    color:#2A7076 ;
+    font-size: 16px;
+    line-height: 25px;
+    width: 350px;
+    height: fit-content;
+    font-weight: bold;
+    position: absolute;
+    top: 35%;
+    left: 5%;    
+    display: none;
+}
+
+.Detail svg{
+    color: #000000;
+    font-size: 16px;
+}
 /*End  Map Part */
 
 /*Newsletter*/
