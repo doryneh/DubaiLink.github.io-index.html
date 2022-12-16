@@ -9,250 +9,536 @@
   <link rel="stylesheet" href="assets/css/fontawesome.min.css">
   <link rel="stylesheet" href="https://unpkg.com/transition-style">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+  <link rel="stylesheet" href="https://npmcdn.com/flickity@2/dist/flickity.css">
   <link rel="stylesheet" href="css/style.css">
   <title>Home Page</title>
 </head>
 
 <body>
-  <div class="one" id="wraper">
-    <div class="overlay">
-  <!--Navbar-->
-  <nav class="navbar navbar-expand-lg justify-content-between fixed-top">
+  <div class="three" id="wraper">
+    <div class="overlay w-100">
+      <!--Navbar-->
+      <nav class="navbar navbar-expand-lg  justify-content-between fixed-top">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="#">
+            <img src="images/DLGLOGO.png" alt="Logo">
+          </a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+            data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+            aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="#">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">About</a>
+              </li>
+
+              <li class="nav-item">
+                <a class="nav-link " href="#">Travel & Tourism</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link " href="#">STS</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link " href="#">Destination Representation</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link " href="#">Royale Lifestyle</a>
+              </li>
+
+            </ul>
+            <div class="d-flex NavSocial">
+              <img src="images/facebook-app-symbol.png" alt="facebook" class="me-3">
+              <img src="images/twitter.png" alt="twitter" class="me-3">
+              <img src="images/instagram.png" alt="instagram" class="me-3">
+              <img src="images/youtube.png" alt="youtube" class="me-3">
+            </div>
+          </div>
+        </div>
+      </nav>
+      <!--End Navbar-->
+      <section class="CarouselPart" id="CarouselPart">
+        <div class="container-fluid px-0">
+          <div id="carouselExampleControls" class="carousel carousel-fade" data-interval="false">
+            <div class="carousel-inner">
+
+              <div class="carousel-item  active" id="carousel-item-one">
+                <div class="overlay">
+                  <div class="carouselImageText">
+                    <h1 class="animate__animated animate__fadeIn">
+                      Redefending
+                      <br>
+                      Hospitality
+                    </h1>
+                    <p>Building the hospitality industry <br>
+                      for a better future so you can <br>
+
+                      discover its wonders,with us</p>
+                  </div>
+
+                  <div class="carousel-caption d-none d-md-block" style="background-color: transparent;">
+                    <p class="">
+                      Discover More
+                      <br>
+                      <img src="images/Dragdownarrow.png" alt="" class="down" style="transform: rotate(90deg);">
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div class="carousel-item " id="carousel-item-Two">
+                <div class="overlay">
+                  <div class="carouselImageText">
+                    <h1>
+                      FINE <br> TRAVEL
+
+                    </h1>
+                    <p>Experience unforgettable <br>
+                      holiday at the best rates </p>
+                  </div>
+                  <div class="carousel-caption d-none d-md-block">
+
+                    <img src="images/Component 6 – 4.png" alt="">
+
+                    <p class="">
+
+                      Discover More
+                      <br>
+                      <img src="images/Dragdownarrow.png" alt="" class="down" style="transform: rotate(90deg);">
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div class="carousel-item " id="carousel-item-Three">
+                <div class="overlay">
+                  <div class="carouselImageText">
+                    <h1>
+                      FIRST-RATE <br> SOLUTION
+
+                    </h1>
+                    <p> Access a one-step solution for all <br> your travel needs
+                    </p>
+                  </div>
+                  <div class="carousel-caption d-none d-md-block">
+                    <img src="images/GTElogo.png " alt="">
+
+
+
+                    <p class="">
+                      Discover More
+                      <br>
+                      <img src="images/Dragdownarrow.png" alt="" class="down" style="transform: rotate(90deg);">
+                    </p>
+
+                  </div>
+                </div>
+              </div>
+              <div class="carousel-item " id="carousel-item-Four">
+                <div class="overlay">
+                  <div class="carouselImageText">
+                    <h1>
+                      VIP <br> EXPERIENCE
+
+                    </h1>
+                    <p>Unlock a premium holiday <br>
+                      experience with exclusive golf <br>
+                      packages at special rates.</p>
+                  </div>
+                </div>
+                <div class="carousel-caption d-none d-md-block">
+                  <img src="images/RL_logo-final-BW (1).png" alt="RL_logo" class="w-25 h-100">
+
+                  <p class="">
+                    Discover More
+                    <br>
+                    <img src="images/Dragdownarrow.png" alt="" class="down" style="transform: rotate(90deg);">
+                  </p>
+                </div>
+              </div>
+              <div class="carousel-item " id="carousel-item-Five">
+                <div class="overlay">
+                  <div class="carouselImageText">
+                    <h1>
+                      PREMIUM <br> SOLUTION
+
+                    </h1>
+                    <p>
+                      Discover smart travel solutions <br>
+                      and special travel products.
+                    </p>
+                  </div>
+                  <div class="carousel-caption d-none d-md-block">
+                    <img src="images/STSLOGO.png" alt="STSLOGO">
+
+
+                    <p class="">
+                      Discover More
+                      <br>
+                      <img src="images/Dragdownarrow.png" alt="" class="down" style="transform: rotate(90deg);">
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div class="carousel-item " id="carousel-item-Six">
+                <div class="overlay">
+                  <div class="carouselImageText">
+                    <h1>
+                      TOP-NOTCH <br> BOOKING
+
+                    </h1>
+                    <p>Dig into a process of searching, <br>
+                      comparing, and booking hotels.</p>
+                  </div>
+                  <div class="carousel-caption d-none d-md-block">
+                    <img src="images/tripstickLogo.png" alt="tripstickLogo">
+
+
+                    <p class="">
+                      Discover More
+                      <br>
+                      <img src="images/Dragdownarrow.png" alt="" class="down" style="transform: rotate(90deg);">
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div class="carousel-item " id="carousel-item-Seven">
+                <div class="overlay">
+                  <div class="carouselImageText">
+                    <h1>
+                      LUXURIOUS
+                      <br>
+                      STAY
+
+                    </h1>
+                    <p>Enjoy a warm ambience, great <br>
+                      facilities, and positive vibes.</p>
+                  </div>
+                  <div class="carousel-caption d-none d-md-block">
+                    <img src="images/NIULOGO.png" alt="tripstickLogo">
+
+                    <p class="">
+                      Discover More
+                      <br>
+                      <img src="images/Dragdownarrow.png" alt="" class="down" style="transform: rotate(90deg);">
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="input-group mx-auto">
+              <div class="inputSearch w-100">
+                <input type="search" class="form-control "
+                  placeholder="Search for your favorite destinations & packages" aria-label="search"
+                  aria-describedby="basic-addon1">
+                <i class="fa-solid fa-magnifying-glass"></i>
+              </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls"
+              data-bs-slide="next">
+              <img src="images/Dragdownarrow.png" alt="">
+              <p class="mb-0">Next</p>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls"
+              data-bs-slide="prev">
+              <img src="images/Dragdownarrow.png" alt="" style="transform:rotate(180deg);">
+              <p class="mb-0">Prev</p>
+
+            </button>
+          </div>
+        </div>
+      </section>
+
+    </div>
+  </div>
+  <!--Landing Page-->
+  <section class="LandingPage" id="LandingPage">
     <div class="container-fluid">
-      <a class="navbar-brand" href="#">
-        <img src="images/DLGLOGO.png" alt="Logo">
-      </a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
-        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarSupportedContent">
-        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-          <li class="nav-item">
-            <a class="nav-link active" aria-current="page" href="#">Home</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">About</a>
-          </li>
+      <!--Brands Carousel-->
 
-          <li class="nav-item">
-            <a class="nav-link " href="#">Travel & Tourism</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link " href="#">STS</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link " href="#">Destination Representation</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link " href="#">Royale Lifestyle</a>
-          </li>
-
-        </ul>
-        <div class="d-flex NavSocial">
-          <img src="images/facebook-app-symbol.png" alt="facebook" class="me-3">
-          <img src="images/twitter.png" alt="twitter" class="me-3">
-          <img src="images/instagram.png" alt="instagram" class="me-3">
-          <img src="images/youtube.png" alt="youtube" class="me-3">
+      <div id="carouselExampleSlidesOnly" class="carousel2 slide" data-bs-ride="carousel">
+        <div class="container-fluid">
+          <div class="carousel-inner">
+            <div class="carousel-item active">
+              <div class="row">
+                <div class="col-md-2 col-4  text-center offset-md-1 BrandLogo">
+                  <a href="">
+                    <img src="images/Component 6 – 4.png" alt="">
+                  </a>
+                </div>
+                <div class="col-md-2 col-4  BrandLogo">
+                  <a href="">
+                    <img src="images/RL_logo-final-BW (1).png" alt="">
+                  </a>
+                </div>
+                <div class="col-md-2 col-4  BrandLogo">
+                  <a href="">
+                    <img src="images/GTElogo.png" alt="">
+                  </a>
+                </div>
+                <div class="col-md-2 d-md-flex d-none BrandLogo">
+                  <a href="">
+                    <img src="images/STSLOGO.png" alt="">
+                  </a>
+                </div>
+                <div class="col-md-2 d-md-flex d-none BrandLogo">
+                  <a href="">
+                    <img src="images/NIULOGO.png" alt="">
+                  </a>
+                </div>
+              </div>
+            </div>
+            <div class="carousel-item">
+              <div class="row">
+                <div class="col-md-2 col-4  text-center offset-md-1 BrandLogo">
+                  <a href="">
+                    <img src="images/Component 6 – 4.png" alt="">
+                  </a>
+                </div>
+                <div class="col-md-2 col-4  BrandLogo">
+                  <a href="">
+                    <img src="images/RL_logo-final-BW (1).png" alt="">
+                  </a>
+                </div>
+                <div class="col-md-2 col-4  BrandLogo">
+                  <a href="">
+                    <img src="images/GTElogo.png" alt="">
+                  </a>
+                </div>
+                <div class="col-md-2 d-md-flex d-none BrandLogo">
+                  <a href="">
+                    <img src="images/STSLOGO.png" alt="">
+                  </a>
+                </div>
+                <div class="col-md-2 d-md-flex d-none BrandLogo">
+                  <a href="">
+                    <img src="images/NIULOGO.png" alt="">
+                  </a>
+                </div>
+              </div>
+            </div>
+            <div class="carousel-item">
+              <div class="row">
+                <div class="col-md-2 col-4  text-center offset-md-1 BrandLogo">
+                  <a href="">
+                    <img src="images/Component 6 – 4.png" alt="">
+                  </a>
+                </div>
+                <div class="col-md-2 col-4  BrandLogo">
+                  <a href="">
+                    <img src="images/RL_logo-final-BW (1).png" alt="">
+                  </a>
+                </div>
+                <div class="col-md-2 col-4  BrandLogo">
+                  <a href="">
+                    <img src="images/GTElogo.png" alt="">
+                  </a>
+                </div>
+                <div class="col-md-2 d-md-flex d-none BrandLogo">
+                  <a href="">
+                    <img src="images/STSLOGO.png" alt="">
+                  </a>
+                </div>
+                <div class="col-md-2 d-md-flex d-none BrandLogo">
+                  <a href="">
+                    <img src="images/NIULOGO.png" alt="">
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </div>
-  </nav>
-  <!--End Navbar-->
-  <section class="CarouselPart" id="CarouselPart">
-    <div class="container-fluid px-0">
-      <div id="carouselExampleControls" class="carousel carousel-fade" data-bs-ride="carousel" data-interval="false">
-        <div class="carousel-inner">
-
-          <div class="carousel-item  active animate__animated animate__fadeOut" id="carousel-item-one">
-            <div class="overlay">
-              <div class="carouselImageText">
-                <h1 class="animate__animated animate__fadeIn">
-                  Redefending
-                  <br>
-                  Hospitality
-                </h1>
-                <p>Building the hospitality industry <br>
-                  for a better future so you can <br>
-
-                  discover its wonders,with us</p>
-              </div>
-              <div class="carousel-caption d-none d-md-block" style="background-color: transparent;">
-                <p class="">
-                  Discover More
-                  <br>
-                  <img src="images/Dragdownarrow.png" alt="" class="down" style="transform: rotate(90deg);">
-                </p>
-              </div>
-            </div>
-          </div>
-          <div class="carousel-item " id="carousel-item-Two">
-            <div class="overlay">
-              <div class="carouselImageText">
-                <h1>
-                  FINE <br> TRAVEL
-
-                </h1>
-                <p>Experience unforgettable <br>
-                  holiday at the best rates </p>
-              </div>
-              <div class="carousel-caption d-none d-md-block">
-
-                <img src="images/Component 6 – 4.png" alt="">
-
-                <p class="">
-
-                  Discover More
-                  <br>
-                  <img src="images/Dragdownarrow.png" alt="" class="down" style="transform: rotate(90deg);">
-                </p>
-              </div>
-            </div>
-          </div>
-          <div class="carousel-item " id="carousel-item-Three">
-            <div class="overlay">
-              <div class="carouselImageText">
-                <h1>
-                  FIRST-RATE <br> SOLUTION
-
-                </h1>
-                <p> Access a one-step solution for all <br> your travel needs
-                </p>
-              </div>
-              <div class="carousel-caption d-none d-md-block">
-                <img src="images/GTElogo.png " alt="">
 
 
+    <div class="container-fluid">
 
-                <p class="">
-                  Discover More
-                  <br>
-                  <img src="images/Dragdownarrow.png" alt="" class="down" style="transform: rotate(90deg);">
-                </p>
+      <!--Photo Description-->
+      <div class="row PhotoDescription py-5  w-100">
+        <div class="col-lg-5 mt-5 pt-5 pe-md-4">
+          <h4 class="TitleDescription mb-4">
+            WELCOME TO <br> DUBAI LINK
+          </h4>
+          <p class="Description mb-4">Over the past couple of decades, dubai link has skillfully intertwined its
+            practices
+            and its philosophy in the hospitality industry for the purpose of recreating experiences and giving birth to
+            a colorful spectrum of discovery, adventure, and everlasting memories.
+            <br>
+            <br>
+            with creativity and passion in mind, we came to revolutionize these experiences by introducing new concepts
+            like never before. we are ready to meet any challenge with confidence and shape the future of the
+            hospitality industry.
+          </p>
+          <img src="images/HomeSea.png" alt="" class="mb-4 w-100">
+          <h4 class="TitleDescription mb-4">
+            HOSPITALITY
+          </h4>
+          <p class="Description mb-4">
+            Our services are composed of various sectors that cover a broad range of fields, providing a clear-cut array
+            of goods and services that are designed to meet and exceed customers’ expectations.
+            <br>
+            <br>
+            These services often overlap and work in conjunction to create one complete and comprehensive hospitality
+            experience - fully redefining the hospitality industry.
 
-              </div>
-            </div>
-          </div>
-          <div class="carousel-item " id="carousel-item-Four">
-            <div class="overlay">
-              <div class="carouselImageText">
-                <h1>
-                  VIP <br> EXPERIENCE
-
-                </h1>
-                <p>Unlock a premium holiday <br>
-                  experience with exclusive golf <br>
-                  packages at special rates.</p>
-              </div>
-            </div>
-            <div class="carousel-caption d-none d-md-block">
-              <img src="images/RL_logo-final-BW (1).png" alt="RL_logo" class="w-25 h-100">
-
-              <p class="">
-                Discover More
-                <br>
-                <img src="images/Dragdownarrow.png" alt="" class="down" style="transform: rotate(90deg);">
-              </p>
-            </div>
-          </div>
-          <div class="carousel-item " id="carousel-item-Five">
-            <div class="overlay">
-              <div class="carouselImageText">
-                <h1>
-                  PREMIUM <br> SOLUTION
-
-                </h1>
-                <p>
-                  Discover smart travel solutions <br>
-                  and special travel products.
-                </p>
-              </div>
-              <div class="carousel-caption d-none d-md-block">
-                <img src="images/STSLOGO.png" alt="STSLOGO">
-
-
-                <p class="">
-                  Discover More
-                  <br>
-                  <img src="images/Dragdownarrow.png" alt="" class="down" style="transform: rotate(90deg);">
-                </p>
-              </div>
-            </div>
-          </div>
-          <div class="carousel-item " id="carousel-item-Six">
-            <div class="overlay">
-              <div class="carouselImageText">
-                <h1>
-                  TOP-NOTCH <br> BOOKING
-
-                </h1>
-                <p>Dig into a process of searching, <br>
-                  comparing, and booking hotels.</p>
-              </div>
-              <div class="carousel-caption d-none d-md-block">
-                <img src="images/tripstickLogo.png" alt="tripstickLogo">
-
-
-                <p class="">
-                  Discover More
-                  <br>
-                  <img src="images/Dragdownarrow.png" alt="" class="down" style="transform: rotate(90deg);">
-                </p>
-              </div>
-            </div>
-          </div>
-          <div class="carousel-item " id="carousel-item-Seven">
-            <div class="overlay">
-              <div class="carouselImageText">
-                <h1>
-                  LUXURIOUS
-                  <br>
-                  STAY
-
-                </h1>
-                <p>Enjoy a warm ambience, great <br>
-                  facilities, and positive vibes.</p>
-              </div>
-              <div class="carousel-caption d-none d-md-block">
-                <img src="images/NIULOGO.png" alt="tripstickLogo">
-
-                <p class="">
-                  Discover More
-                  <br>
-                  <img src="images/Dragdownarrow.png" alt="" class="down" style="transform: rotate(90deg);">
-                </p>
-              </div>
-            </div>
-          </div>
+          </p>
         </div>
-        <div class="input-group mx-auto">
-          <div class="inputSearch w-100">
-            <input type="search" class="form-control " placeholder="Search for your favorite destinations & packages"
-              aria-label="search" aria-describedby="basic-addon1">
-            <i class="fa-solid fa-magnifying-glass"></i>
-          </div>
+        <div class="col-lg-5  offset-lg-2">
+          <img src="images/KhalifaTwoer.png" alt="KhalifaTwoer" class="mb-4 w-100">
+          <h4 class="TitleDescription mb-4">
+            TRAVEL & TOURISM
+          </h4>
+          <p class="Description mb-5">
+            Not only do our platforms provide remarkable paramount services that help business partners grant their
+            clients an outstanding travel experience, but they also help travelers plan, book and enjoy unforgettable
+            holidays at the best rates.
+          </p>
+          <img src="images/Home-1.png" alt="" class="mb-4 w-100">
         </div>
-        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls"
-          data-bs-slide="next">
-          <img src="images/Dragdownarrow.png" alt="">
-          <p class="mb-0">Next</p>
-        </button>
-        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls"
-          data-bs-slide="prev">
-          <img src="images/Dragdownarrow.png" alt="" style="transform:rotate(180deg);">
-          <p class="mb-0">Prev</p>
-
-        </button>
+        <div class="col-12">
+          <h4 class="TitleDescription mb-4">
+            EXPLORE THE WORLD
+          </h4>
+          <video controls class="w-100" src="images/Dubailink Vedio Trimed .mp4" poster="images/dubai link-1 (2).png"
+            autoplay muted loop>
+            <source src="video/hsoub.mp4" type="video/webm">
+            <source src="video/hsoub.webm" type="video/mp4">
+            <track kind="captions" srclang="en" label="english" default>
+            Your browser do not support this video
+            <code>video</code>
+          </video>
+        </div>
+        <div class="col-lg-5 pe-md-4 mt-5">
+          <img src="images/Home-2.png" alt="" class="mb-4 w-100">
+          <h4 class="TitleDescription mb-4">
+            ROYAL LIFESTYLE
+          </h4>
+          <p class="Description mb-5">
+            In collaboration with our partner, the royal lifestyle, we facilitate a growing international community of
+            golf enthusiasts by creating tools and solutions with unmatched results - the players come first.
+          </p>
+          <img src="images/Home-3.png" alt="" class="mb-4 w-100">
+          <h4 class="TitleDescription my-4">
+            DISCOVER THE BEST DESTINATIONS WITH US
+          </h4>
+          <p class="Description mb-5">
+            Finding out how to travel the world is no easy feat, so we managed to put together a guide on how to travel
+            the world, including everything from choosing any of our featured destinations to saving money once you’re
+            abroad. </p>
+        </div>
+        <div class="col-lg-5  offset-lg-2 mt-5">
+          <h4 class="TitleDescription mb-4">
+            DESTINATION <br> REPRESENTATION
+          </h4>
+          <p class="Description mb-4">
+            Being solely focused on supporting all welcoming destinations, we aim to introduce all travelers to the root
+            of every culture, allowing them to experience and meet people who give every destination its uniqueness and
+            authenticity.
+          </p>
+          <img src="images/Rectangle 11.png" alt="" class="mb-4 w-100">
+          <h4 class="TitleDescription mb-4">
+            SMART TOURISM SOLUTION
+          </h4>
+          <p class="Description mb-4">
+            Under our umbrella, sts excels at promoting smart travel solutions through its wide network of individuals
+            and large corporations that seek to develop and improve the travel experience for its vip clients.
+          </p>
+          <img src="images/Home-4.png" alt="" class="mb-4 w-100">
+        </div>
       </div>
+    </div>
+    <!--Informative Slider-->
+    <div class="infromativeSlider">
+      <div class="carousel" data-flickity='{ "wrapAround": true , "autoPlay": true }'>
+        <div class="carousel-cell">
+          <div class="overlay">
+            <img src="images/InfoCarousel1.png" class="w-100" />
+            <a href="" class="MoreDetails"><button>More Details</button></a>
+          </div>
+        </div>
+        <div class="carousel-cell">
+          <div class="overlay">
+            <img src="images/InfoCarousel2.png" class="w-100" />
+            <a href="" class="MoreDetails"><button>More Details</button></a>
+          </div>
+        </div>
+        <div class="carousel-cell">
+          <div class="overlay">
+
+            <img src="images/InfoCarousel2.png" class="w-100" />
+            <a href="" class="MoreDetails"><button>More Details</button></a>
+          </div>
+        </div>
+        <div class="carousel-cell"></div>
+        <div class="carousel-cell"></div>
+
+        <div class="carousel-cell">
+          <div class="overlay">
+            <img src="images/InfoCarousel6.png" class="w-100" />
+            <a href="" class="MoreDetails"><button>More Details</button></a>
+          </div>
+        </div>
+      </div>
+
+    </div>
+    <!--End Informative Slider-->
+
+    <!--Map Part-->
+    <div class="Map mt-5 p-5">
+      <div class="container-fluid">
+        <h4 class="TitleDescription mb-4">
+          OUR LOCATIONS <br> AROUND THE WORLD
+        </h4>
+        <div class="MapBG offset-md-2 ">
+          <img src="images/Component 13 – 1.svg" class="" alt="">
+        </div>
+      </div>
+    </div>
+    <!--End Map Part-->
+
+    <!--NewsLetter Part-->
+    <div class="NewsLetter p-5">
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col-md-5">
+            <h5 class="mt-1">
+              SUBSCRIBE TO OUR NEWSLETTER
+            </h5>
+          </div>
+          <div class="col-md-7">
+            <form class="w-100 ">
+              <form class="EmailInput w-100">
+                <div class="row">
+                  <div class="col-8">
+                    <input type="email" class="form-control w-100 me-0" placeholder="Enter your email…"
+                      aria-label="email" aria-describedby="basic-addon1">
+                  </div>
+                  <div class="col-4">
+                    <button type="button" class="btn btn-primary">Primary</button>
+                  </div>
+              </form>
+
+
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+    </div>
+    <!--End NewsLetter Part-->
+
     </div>
   </section>
-</div>
-</div>
+
 </body>
 
 <script src="assets/js/jquery-3.6.1.min.js"></script>
 <script src="assets/js/bootstrap.js"></script>
 <script src="assets/js/all.js"></script>
+<script src="https://npmcdn.com/flickity@2/dist/flickity.pkgd.js"></script>
 <script src="js/js.js"></script>
 
 </html>

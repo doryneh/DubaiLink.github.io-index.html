@@ -4,30 +4,30 @@
 
 }
 
-@font-face {
-    font-family: DosisSemiBold;
-    src: url(../fonts/Dosis/Dosis-SemiBold.ttf);
-}
+
 
 
 @keyframes circle-in-top-right {
     from {
-      clip-path: circle(0% at right center);
+        clip-path: circle(0% at right center);
     }
+
     to {
-      clip-path: circle(200% at left center);
+        clip-path: circle(200% at left center);
     }
-  }
-  
-  [transition-style="in:circle:right-center"] {
-    animation: 2.5s cubic-bezier(.25, 1, .30, 1) circle-in-top-right both;
-  }
- 
+}
+
+[transition-style="in:circle:right-center"] {
+    animation: 1s cubic-bezier(.25, 1, .30, 1) circle-in-top-right both;
+}
+
 
 body {
     direction: ltr;
     font-family: Neris-Light !important;
-  
+    width: 100vw !important;
+    max-width: 100%;
+    overflow-x: hidden;
 }
 
 /********
@@ -35,14 +35,20 @@ body {
 Navbar
 *********
 **********/
-#wraper{
+#wraper {
     background-position: top;
     background-size: 100vw 100vh !important;
     background-repeat: no-repeat;
+    max-width: 100vw;
 }
 
 nav.navbar {
     background-color: transparent;
+}
+
+nav.navbar.blackNav {
+    background-color: #121212e5 !important;
+    transition: background-color 0.5s;
 }
 
 nav.navbar ul.navbar-nav {
@@ -89,29 +95,39 @@ section.CarouselPart .carousel .carousel-inner .carousel-item {
     background-position: top;
     background-size: 100vw 100vh !important;
     background-repeat: no-repeat;
-    transition: 0s ease-out all;
-}
-section.CarouselPart .carousel .carousel-inner .carousel-item.active{
-    animation-name: circle-in-top-right ;
-    animation-duration:3s;
 }
 
-section.CarouselPart .carousel .carousel-inner .carousel-item .overlay,#wraper .overlay {
+section.CarouselPart .carousel .carousel-inner .carousel-item.active {
+    animation-duration: 3s;
+}
+
+section.CarouselPart .carousel .carousel-inner .carousel-item .overlay {
     background-image: url(../images/OVERLAY.png);
     width: 100vw;
     height: 100vh;
     display: flex;
     align-items: center;
- 
+    background-size: cover;
+    position: relative;
+
 }
 
-#carousel-item-one,.three {
-    background-image: url(../images/Home1.png);
-   
+#wraper .overlay {
+    background-image: url(../images/OVERLAY.png);
+    width: 100vw;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    background-size: cover;
+}
+
+#carousel-item-one, .three {
+    background-image: url(../images/Homescreen1.png);
+
 }
 
 
-#carousel-item-Two,.four {
+#carousel-item-Two, .four {
     background-image: url(../images/Dubailinktravel.png);
 }
 
@@ -120,19 +136,19 @@ section.CarouselPart .carousel .carousel-inner .carousel-item .overlay,#wraper .
     background-image: url(../images/GTE.png);
 }
 
-#carousel-item-Four,.six {
+#carousel-item-Four, .six {
     background-image: url(../images/RoyalLifestyl.png);
 }
 
-#carousel-item-Five,.seven {
+#carousel-item-Five, .seven {
     background-image: url(../images/STS.png);
 }
 
-#carousel-item-Six,.one {
+#carousel-item-Six, .one {
     background-image: url(../images/tripstick.png);
 }
 
-#carousel-item-Seven,.two {
+#carousel-item-Seven, .two {
     background-image: url(../images/NIU.png);
 }
 
@@ -147,10 +163,10 @@ section.CarouselPart .carousel .carousel-inner .carousel-item .carouselImageText
     font-size: 70px;
     text-transform: uppercase;
     line-height: 89px;
-    font-family: DosisSemiBold;
+    font-weight: 500;
     padding-left: 20px;
     animation: fadeIn 5s;
-    
+
 }
 
 section.CarouselPart .carousel .carousel-inner .carousel-item .carouselImageText p {
@@ -161,7 +177,7 @@ section.CarouselPart .carousel .carousel-inner .carousel-item .carouselImageText
     font-weight: 400;
     opacity: 80%;
     animation: fadeIn 5s;
-     
+
 
 }
 
@@ -243,6 +259,8 @@ section.CarouselPart .carousel .input-group input {
     line-height: 22px;
     border: 1px solid rgba(255, 255, 255, 0.336);
     padding: 10px 20px;
+    box-shadow: none !important;
+
 }
 
 section.CarouselPart .carousel .input-group input::placeholder {
@@ -264,10 +282,12 @@ section.CarouselPart .carousel .input-group input::-ms-input-placeholder {
     color: white;
     opacity: 0.8;
 }
-section.CarouselPart .carousel .input-group .inputSearch{
+
+section.CarouselPart .carousel .input-group .inputSearch {
     position: relative;
 }
-section.CarouselPart .carousel .input-group svg{
+
+section.CarouselPart .carousel .input-group svg {
     position: absolute;
     top: 50%;
     right: 5%;
@@ -279,5 +299,219 @@ section.CarouselPart .carousel .input-group svg{
 /********
 *********
 End Carousel
+*********
+**********/
+
+
+
+/********
+*********
+Landing Page Contnet
+*********
+**********/
+
+/* Brand Carousel */
+
+#carouselExampleSlidesOnly {
+    filter: drop-shadow(0px 3px 6px #CBCBCB29);
+
+}
+
+#carouselExampleSlidesOnly .carousel-inner .carousel-item .row {
+    background-color: white;
+    max-width: 100vw;
+    padding: 20px 0;
+}
+
+#carouselExampleSlidesOnly .carousel-inner .carousel-item .col-md-2 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+#carouselExampleSlidesOnly .carousel-inner .carousel-item .col-md-2 img {
+    filter: brightness(50%);
+}
+
+/*End Brand Carousel */
+
+/* Photo Description */
+section.LandingPage .PhotoDescription {
+    background-color: #F8F8F8;
+}
+
+section.LandingPage .PhotoDescription h4.TitleDescription, section.LandingPage .Map h4.TitleDescription {
+    font-size: 40px;
+    font-weight: bold;
+    color: #2A7076;
+    text-transform: uppercase;
+    line-height: 50px;
+}
+
+section.LandingPage .PhotoDescription p.Description {
+    font-size: 22px;
+    color: #2A7076;
+    line-height: 29px;
+}
+
+/*End Photo Description */
+
+/* Informative Carousel */
+section.LandingPage .infromativeSlider .carousel {
+    background: transparent;
+}
+
+section.LandingPage .infromativeSlider .carousel-cell {
+    width: 66%;
+    min-height: 70vh;
+    height: fit-content;
+    margin-right: 10px;
+    background: transparent;
+    border-radius: 5px;
+    counter-increment: carousel-cell;
+    border-radius: 20px;
+    opacity: 0.5;
+    height: 90%;
+
+}
+
+section.LandingPage .infromativeSlider .carousel-cell.is-selected {
+    opacity: 1 !important;
+    transition: padding-top 0.5s, opacity 0.5s;
+    transition-timing-function: linear;
+}
+
+section.LandingPage .infromativeSlider .carousel-cell .overlay {
+    width: 90%;
+    padding: 12.5px 0;
+    margin: auto;
+}
+
+section.LandingPage .infromativeSlider .carousel-cell.is-selected .overlay {
+    width: 100%;
+    transition: width 0.2s;
+    transition-timing-function: linear;
+    padding: 0px 0px !important;
+
+}
+
+section.LandingPage .infromativeSlider .carousel-cell:hover a.MoreDetails {
+    display: block;
+    border-radius: 50%;
+    background-color: rgb(255, 255, 255);
+    filter: drop-shadow(0px 3px 6px #00000029);
+    height: 70px;
+    width: 70px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 200000;
+}
+
+section.LandingPage .infromativeSlider .carousel-cell .overlay {
+    position: relative;
+}
+
+section.LandingPage .infromativeSlider .carousel-cell .overlay img {
+    height: 100%;
+}
+
+section.LandingPage .infromativeSlider .carousel-cell a.MoreDetails {
+    display: none;
+    position: fixed;
+}
+
+section.LandingPage .infromativeSlider .carousel-cell a.MoreDetails button {
+    background-color: transparent;
+    border: none;
+    color: #000000;
+    font-size: 15px;
+    line-height: 21px;
+    height: 70px;
+    width: 70px;
+}
+
+section.LandingPage .infromativeSlider .flickity-page-dots, .flickity-prev-next-button.next, .flickity-prev-next-button.previous {
+    display: none;
+}
+
+/* End Informative Carousel */
+
+/* Map Part */
+section.LandingPage .Map {
+    background-color: #2A7076;
+    opacity: 0.94;
+    position: relative;
+}
+
+section.LandingPage .Map h4.TitleDescription {
+    color: white;
+    position: absolute;
+    top: 15%;
+    left: 5%;
+}
+
+/*End  Map Part */
+
+/*Newsletter*/
+section.LandingPage .NewsLetter {
+    background-color: hsla(0, 0%, 19%, 0.884);
+    filter: drop-shadow(0px 3px 6px #00000029);
+}
+
+section.LandingPage .NewsLetter h5 {
+    color: white;
+    font-size: 25px;
+    font-size: 32px;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+section.LandingPage .NewsLetter input, section.LandingPage .NewsLetter button.btn-primary {
+    background-color: #FFFFFF;
+    border: 1px solid #FFFFFF;
+    border-radius: 6px;
+    font-size: 14px;
+    line-height: 18px;
+    padding: 20px;
+
+}
+
+section.LandingPage .NewsLetter input::placeholder {
+    /* Chrome, Firefox, Opera, Safari 10.1+ */
+    color: #484848;
+    opacity: 0.8;
+    /* Firefox */
+}
+
+section.LandingPage .NewsLetter input:-ms-input-placeholder {
+    /* Internet Explorer 10-11 */
+    color: #484848;
+    opacity: 0.8;
+
+}
+
+section.LandingPage .NewsLetter input::-ms-input-placeholder {
+    /* Microsoft Edge */
+    color: #484848;
+    opacity: 0.8;
+}
+
+section.LandingPage .NewsLetter button.btn-primary {
+    color: #484848;
+    padding: 20px 40px;
+}
+
+section.LandingPage .NewsLetter button.btn-primary:hover {
+    background-color: #484848;
+    color: white;
+}
+
+/*End NewsLetter*/
+
+/********
+*********
+End Landing Page Contnet
 *********
 **********/

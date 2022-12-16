@@ -1,5 +1,6 @@
-$(".carousel-control-prev").click(function () {
-   $("section.CarouselPart .carousel .carousel-inner .carousel-item.active").css("animation-name", "circle-in-top-right");
+
+$(".carousel-control-prev,.carousel-control-next").click(function () {
+   $("section.CarouselPart .carousel .carousel-inner .carousel-item.active").css("animation-name", " circle-in-top-right");
 });
 $(".carousel-control-prev").click(function () {
    if ($('#carousel-item-one').hasClass('active')) {
@@ -49,6 +50,8 @@ $(".carousel-control-prev").click(function () {
    };
 });
 
+
+ 
 /*******
  Previous
  ********/
@@ -103,3 +106,12 @@ $(".carousel-control-next").click(function () {
    };
 });
 
+
+$(window).scroll(function () {
+   if ($(this).scrollTop() >= 0) {
+     $("nav.navbar").addClass("blackNav");
+   } 
+   if ($(this).scrollTop() == 0) {
+     $("nav.navbar").removeClass("blackNav");
+   }
+ });
