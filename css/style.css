@@ -20,24 +20,31 @@
 [transition-style="in:circle:right-center"] {
     animation: 1s cubic-bezier(.25, 1, .30, 1) circle-in-top-right both;
 }
+
 @keyframes fadeInUp {
     0% {
-      opacity: 0;
-      transform: translateY(40px);
+        opacity: 0;
+        transform: translateY(40px);
     }
+
     100% {
-      opacity: 1;
-      transform: translateY(0);
+        opacity: 1;
+        transform: translateY(0);
     }
-  }
+}
 
 body {
     direction: ltr;
     font-family: Neris-Light !important;
-    width: 100vw !important;
+    width: 100% !important;
     max-width: 100%;
 }
-
+.GreyBodyBg{
+    background-color: #F8F8F8;
+}
+.WhiteBodyBg{
+    background-color: white !important;
+}
 /********
 *********
 Navbar
@@ -45,17 +52,20 @@ Navbar
 **********/
 #wraper {
     background-position: top;
-    background-size: 100vw 100vh !important;
+    background-size: cover !important;
     background-repeat: no-repeat;
-    max-width: 100vw;
+    width: 100%;
+    max-height: 100vh;
 }
 
 nav.navbar {
     background-color: transparent;
 }
-nav.navbar  img .Logo{
+
+nav.navbar  img.Logo  {
     filter: brightness(0) invert(1);
 }
+
 nav.navbar.blackNav {
     background-color: #121212e5 !important;
     transition: background-color 0.5s;
@@ -79,7 +89,10 @@ nav.navbar ul.navbar-nav li.nav-item a.nav-link {
     font-weight: 100;
     opacity: 80%;
 }
-
+nav.navbar ul.navbar-nav li.nav-item a.nav-link.active{
+    font-weight: bolder;
+    opacity: 100%;
+}
 nav.navbar ul.navbar-nav li.nav-item a.nav-link:hover {
     color: rgb(211, 211, 211);
 }
@@ -103,7 +116,7 @@ Carousel
 **********/
 section.CarouselPart .carousel .carousel-inner .carousel-item {
     background-position: top;
-    background-size: 100vw 100vh !important;
+    background-size: cover;
     background-repeat: no-repeat;
 }
 
@@ -113,8 +126,8 @@ section.CarouselPart .carousel .carousel-inner .carousel-item.active {
 
 section.CarouselPart .carousel .carousel-inner .carousel-item .overlay {
     background-image: url(../images/OVERLAY.png);
-    width: 100vw;
-    height: 100vh;
+    width: 100%;
+    max-height: 100vh;
     display: flex;
     align-items: center;
     background-size: cover;
@@ -124,14 +137,12 @@ section.CarouselPart .carousel .carousel-inner .carousel-item .overlay {
 
 #wraper .overlay {
     background-image: url(../images/OVERLAY.png);
-    width: 100vw;
-    min-height: 100vh;
-    display: flex;
-    align-items: center;
     background-size: cover;
+    width: 100%;
+    height: 100vh;
 }
 
-#carousel-item-one, .three {
+#wraper #carousel-item-one, .three {
     background-image: url(../images/Homescreen1.png);
 
 }
@@ -174,7 +185,6 @@ section.CarouselPart .carousel .carousel-inner .carousel-item .carouselImageText
     text-transform: uppercase;
     line-height: 89px;
     font-weight: 500;
-    padding-left: 20px;
     animation: fadeIn 5s;
 
 }
@@ -183,7 +193,6 @@ section.CarouselPart .carousel .carousel-inner .carousel-item .carouselImageText
     font-size: 30px;
     line-height: 40px;
     font-family: Neris-Light;
-    padding-left: 20px;
     font-weight: 400;
     opacity: 80%;
     animation: fadeIn 5s;
@@ -192,8 +201,8 @@ section.CarouselPart .carousel .carousel-inner .carousel-item .carouselImageText
 }
 
 section.CarouselPart .carousel .carousel-inner .carousel-item .carousel-caption {
-    width: 20%;
-    height: 25%;
+    width: 15%;
+    height: 20%;
     right: 50%;
     transform: translateX(50%);
     left: unset;
@@ -221,7 +230,7 @@ section.CarouselPart .carousel .carousel-inner .carousel-item .carousel-caption 
 }
 
 section.CarouselPart .carousel .carousel-inner .carousel-item .carousel-caption img {
-    width: 30%;
+    width: 40%;
     object-fit: cover;
 }
 
@@ -327,6 +336,9 @@ Landing Page Contnet
 
 }
 
+#carouselExampleSlidesOnly .carousel-inner .carousel-item {
+    transition: 5s ease all !important;
+}
 #carouselExampleSlidesOnly .carousel-inner .carousel-item .row {
     background-color: white;
     max-width: 100vw;
@@ -347,11 +359,11 @@ Landing Page Contnet
 /*End Brand Carousel */
 
 /* Photo Description */
-section.LandingPage .PhotoDescription {
+section.LandingPage .PhotoDescription ,section.DubaiLink .PhotoDescription{
     background-color: #F8F8F8;
 }
 
-section.LandingPage .PhotoDescription h4.TitleDescription, section.LandingPage .Map h4.TitleDescription {
+section.LandingPage .PhotoDescription h4.TitleDescription, .Map h4.TitleDescription, section.DubaiLink .PhotoDescription  h4.TitleDescription,section.DubaiLink  .PhotoDescriptionNoAnim    h4.TitleDescription {
     font-size: 40px;
     font-weight: bold;
     color: #2A7076;
@@ -360,22 +372,26 @@ section.LandingPage .PhotoDescription h4.TitleDescription, section.LandingPage .
     opacity: 0;
 
 }
-
-section.LandingPage .PhotoDescription p.Description {
+.PhotoDescriptionNoAnim  p.Description{
+    opacity: 1 !important;
+}
+.PhotoDescription p.Description{
     font-size: 22px;
     color: #2A7076;
     line-height: 29px;
     opacity: 0;
 }
+
 section.LandingPage .PhotoDescription img {
     opacity: 0;
-
 }
-.animated{
+
+.animated {
     animation: fadeInUp 0.2s linear;
     transition: 0.1s ease all;
     opacity: 1 !important;
 }
+
 /*End Photo Description */
 
 /* Informative Carousel */
@@ -416,8 +432,8 @@ section.LandingPage .infromativeSlider .carousel-cell.is-selected .overlay {
     transition: width 0.2s;
     transition-timing-function: linear;
     padding: 0px 0px !important;
-position: relative;
-border-radius:20px ;
+    position: relative;
+    border-radius: 20px;
 
 }
 
@@ -425,12 +441,14 @@ border-radius:20px ;
 
 section.LandingPage .infromativeSlider .carousel-cell .overlay {
     position: relative;
-    border-radius:20px ;
+    border-radius: 20px;
 }
-section.LandingPage .infromativeSlider .carousel-cell.is-selected:hover .overlay{
+
+section.LandingPage .infromativeSlider .carousel-cell.is-selected:hover .overlay {
     background-image: linear-gradient(#00000000, rgba(0, 0, 0, 0.993));
     z-index: 1000;
 }
+
 section.LandingPage .infromativeSlider .carousel-cell .overlay img {
     height: 100%;
 }
@@ -441,12 +459,14 @@ section.LandingPage .infromativeSlider .carousel-cell a.MoreDetails {
     bottom: 10%;
     background-color: transparent;
     text-decoration: none;
+    width: 100%;
 }
-section.LandingPage .infromativeSlider .carousel-cell:hover a.MoreDetails button div{
+
+section.LandingPage .infromativeSlider .carousel-cell:hover a.MoreDetails button div {
     width: 30px;
     height: 30px;
-
 }
+
 section.LandingPage .infromativeSlider .carousel-cell:hover a.MoreDetails p {
     font-size: 25px;
     font-weight: bold;
@@ -454,7 +474,8 @@ section.LandingPage .infromativeSlider .carousel-cell:hover a.MoreDetails p {
     display: block;
     color: white;
 }
-section.LandingPage .infromativeSlider .carousel-cell:hover a.MoreDetails button div svg{
+
+section.LandingPage .infromativeSlider .carousel-cell:hover a.MoreDetails button div svg {
     transition: 0.5s ease all;
     font-size: 15px;
 }
@@ -466,7 +487,9 @@ section.LandingPage .infromativeSlider .carousel-cell a.MoreDetails button {
     font-size: 25px;
     font-weight: bold;
     position: relative;
-    padding: 0 50px;
+    padding: 0;
+    text-align: left;
+    width: 25%;
 }
 
 section.LandingPage .infromativeSlider .carousel-cell a.MoreDetails button div {
@@ -480,84 +503,95 @@ section.LandingPage .infromativeSlider .carousel-cell a.MoreDetails button div {
     justify-content: center;
     align-items: center;
     position: absolute;
-    left: 2%;
-    top: 50%;
-    transform: translate(-50%,-50%);   
+    left: 75%;
+    top: 60%;
+    transform: translate(-50%, -50%);
 }
-section.LandingPage .infromativeSlider .carousel-cell a.MoreDetails button div svg{
+
+section.LandingPage .infromativeSlider .carousel-cell a.MoreDetails button div svg {
     font-size: 2px;
     color: black;
 }
-section.LandingPage .infromativeSlider .carousel-cell a.MoreDetails p{
+
+section.LandingPage .infromativeSlider .carousel-cell a.MoreDetails p {
     display: none;
     transition: 1s ease all;
 }
-section.LandingPage .infromativeSlider .flickity-page-dots, .flickity-prev-next-button.next, .flickity-prev-next-button.previous {
+
+.flickity-page-dots, .flickity-prev-next-button.next, .flickity-prev-next-button.previous {
     display: none;
 }
 
 /* End Informative Carousel */
 
 /* Map Part */
-section.LandingPage .Map {
+.Map {
     background-color: #313131;
     opacity: 0.94;
     position: relative;
+    overflow: hidden;
 }
 
-section.LandingPage .Map h4.TitleDescription {
+.Map h4.TitleDescription {
     color: white;
     position: absolute;
     top: 15%;
     left: 5%;
 }
-section.LandingPage .Map .MapBG {
+
+.Map .MapBG {
     width: 100%;
     height: 100%;
 
 }
-section.LandingPage .Map .MapIndex0 {
+
+.Map .MapIndex0 {
     top: 45%;
     left: 50%;
     position: absolute;
-    transform: translate(-50%,-50%);
+    transform: translate(-50%, -50%);
 }
 
-section.LandingPage .Map .MapIndex1 {
+.Map .MapIndex1 {
     top: 55%;
     left: 45%;
     position: absolute;
-    transform: translate(-50%,-50%);
+    transform: translate(-50%, -50%);
 }
-section.LandingPage .Map .MapIndex2{
+
+.Map .MapIndex2 {
     top: 53%;
     left: 47%;
     position: absolute;
-    transform: translate(-50%,-50%);
+    transform: translate(-50%, -50%);
 }
-section.LandingPage .Map .MapIndex3 {
+
+.Map .MapIndex3 {
     top: 57%;
     left: 50%;
     position: absolute;
-    transform: translate(-50%,-50%);
+    transform: translate(-50%, -50%);
 }
-section.LandingPage .Map .MapIndex4 {
+
+.Map .MapIndex4 {
     top: 52%;
     left: 54%;
     position: absolute;
-    transform: translate(-50%,-50%);
+    transform: translate(-50%, -50%);
 }
-section.LandingPage .Map .MapIndex5 {
+
+.Map .MapIndex5 {
     top: 60%;
     left: 48%;
     position: absolute;
-    transform: translate(-50%,-50%);
+    transform: translate(-50%, -50%);
 }
-.Detail{
+
+.Detail {
     background-color: white;
-    border-radius: 20px ;
+    border-radius: 20px;
     filter: drop-shadow(0px 3px 6px #00000029);
-    color:#2A7076 ;
+    color: #2A7076;
     font-size: 16px;
     line-height: 25px;
     width: 350px;
@@ -565,23 +599,24 @@ section.LandingPage .Map .MapIndex5 {
     font-weight: bold;
     position: absolute;
     top: 35%;
-    left: 5%;    
+    left: 5%;
     display: none;
 }
 
-.Detail svg{
+.Detail svg {
     color: #000000;
     font-size: 16px;
 }
+
 /*End  Map Part */
 
 /*Newsletter*/
-section.LandingPage .NewsLetter {
+.NewsLetter {
     background-color: hsla(0, 0%, 19%, 0.884);
     filter: drop-shadow(0px 3px 6px #00000029);
 }
 
-section.LandingPage .NewsLetter h5 {
+.NewsLetter h5 {
     color: white;
     font-size: 25px;
     font-size: 32px;
@@ -589,7 +624,7 @@ section.LandingPage .NewsLetter h5 {
     font-weight: bold;
 }
 
-section.LandingPage .NewsLetter input, section.LandingPage .NewsLetter button.btn-primary {
+.NewsLetter input, .NewsLetter button.btn-primary {
     background-color: #FFFFFF;
     border: 1px solid #FFFFFF;
     border-radius: 6px;
@@ -599,32 +634,32 @@ section.LandingPage .NewsLetter input, section.LandingPage .NewsLetter button.bt
 
 }
 
-section.LandingPage .NewsLetter input::placeholder {
+.NewsLetter input::placeholder {
     /* Chrome, Firefox, Opera, Safari 10.1+ */
     color: #484848;
     opacity: 0.8;
     /* Firefox */
 }
 
-section.LandingPage .NewsLetter input:-ms-input-placeholder {
+.NewsLetter input:-ms-input-placeholder {
     /* Internet Explorer 10-11 */
     color: #484848;
     opacity: 0.8;
 
 }
 
-section.LandingPage .NewsLetter input::-ms-input-placeholder {
+.NewsLetter input::-ms-input-placeholder {
     /* Microsoft Edge */
     color: #484848;
     opacity: 0.8;
 }
 
-section.LandingPage .NewsLetter button.btn-primary {
+.NewsLetter button.btn-primary {
     color: #484848;
     padding: 20px 40px;
 }
 
-section.LandingPage .NewsLetter button.btn-primary:hover {
+.NewsLetter button.btn-primary:hover {
     background-color: #484848;
     color: white;
 }
@@ -636,3 +671,265 @@ section.LandingPage .NewsLetter button.btn-primary:hover {
 End Landing Page Contnet
 *********
 **********/
+
+
+
+/********
+*********
+Dubai Link 
+*********
+**********/
+#TextCarousel{
+    position: absolute;
+    top: 25%;
+    right: 10%;
+    height: 100%;
+    width: 50%;
+}
+
+#TextCarousel .carousel-item{
+    background-color: white;
+    padding: 35px;
+    width: 100%;
+    border-radius: 12px;
+    filter:drop-shadow(0px 3px 6px #81818129);
+    height: 700px;
+}
+#TextCarousel .carousel-item p.Description{
+    animation: none !important;
+    transition: none !important;
+    font-size: 22px;
+    color: #2A7076;
+    line-height: 29px;
+}
+
+#TextCarousel .carousel-item p.Description img,section.GTE p.Description img{
+    filter: brightness(0);
+    width: 0px;
+}
+#TextCarousel .carousel-item p.Description:hover ,section.GTE p.Description:hover img{
+    width: 35px;
+}
+#carouselDubai .carousel-control-prev,#carouselDubai .carousel-control-next{
+    height: fit-content ;
+    left: 70%;
+    width: 20%;
+    opacity: 1 !important;
+    z-index: 100;
+}
+
+#carouselDubai .carousel-control-prev{
+    top: 90%;
+
+}
+#carouselDubai .carousel-control-next{
+    top: 75%;
+}
+section.DubaiLink .PhotoDescriptionNoAnim h3.SubTitle{
+    font-size: 25px;
+    line-height: 34px;
+    color: #00808B;
+    font-weight: bold;
+
+}
+section.DubaiLink .PhotoDescription .servicesCarousel {
+    width: 100%;
+}
+section.DubaiLink .PhotoDescription .servicesCarousel img{
+    width: 50%;
+
+}
+#carouselDubai .carousel-item,#TextCarousel .carousel-item{
+    transition: 0.3s ease all;
+}
+/********
+*********
+End Dubai Link 
+*********
+**********/
+
+
+/********
+*********
+About Page
+*********
+**********/
+section.CarouselPart #AboutCarousel .carousel-inner .carousel-item {
+    height: 100vh;
+}
+section.CarouselPart #AboutCarousel .carousel-inner .carousel-item .overlay{
+    height: 100%;
+}
+section.CarouselPart #AboutCarousel #carousel-item-one{
+    background-image: url(../images/Aboutbanner.png);
+}
+
+.infromativeSliderAbout{
+    padding-bottom: 20px;
+}
+.infromativeSliderAbout .carousel-cell {
+    width: 24%;
+    margin-right: 10px;
+    border-radius: 5px;
+    counter-increment: carousel-cell;
+    height: 450px;
+}
+  .infromativeSliderAbout .position-relative{
+    height: 20% !important;
+  }
+  .infromativeSliderAbout:before{
+    display: none;
+  }
+  .infromativeSliderAbout .card {
+    background-color: transparent;
+    border-radius: 12px;
+    filter: drop-shadow(0px 3px 6px #81818129);
+    border: none;
+    
+  }
+  .infromativeSliderAbout .card .card-body{
+    background-color: white;
+    text-align: center;
+    border-radius: 12px;
+    margin-top: 100px;
+    height: 100%;
+    padding-bottom: 40px !important;
+  }
+  .infromativeSliderAbout .card .imgbg{
+    width: 35%;
+    background-color: transparent;
+    margin: auto;  
+    border-radius: 5px;
+    position: absolute;
+    left: 50%;
+    top: 35px;
+    transform: translateX(-50%);
+    filter: drop-shadow(unset);
+}
+  .infromativeSliderAbout .card img{
+    width: 70%;
+    border-radius: 5px;
+    filter: drop-shadow(unset);
+
+  }
+  .infromativeSliderAbout  .card .card-body .card-title{
+    color: #00808B;
+    font-size: 25px;
+    line-height: 34px;
+    font-weight: bold;
+    text-transform: uppercase;
+
+  }
+  .infromativeSliderAbout .card .card-body .card-text{
+    color:#00808B ;
+    font-size: 22px;
+    line-height: 29px;  
+}
+section.LeaderShipCarousel .carousel-cell {
+    height: fit-content;
+}
+section.LeaderShipCarousel .carousel-cell .card {
+    background-color: transparent;
+    border-radius: 20px;
+    color: white;
+    border: none;
+    padding: 20px;
+}
+section.LeaderShipCarousel .carousel-cell .card .card-body{
+    background-color:#323232 ;
+    border-bottom-right-radius: 20px;
+    border-bottom-left-radius: 20px;
+
+}
+section.LeaderShipCarousel .carousel-cell .card .card-body .card-title{
+    font-size: 32px;
+    font-weight: bold;
+    line-height: 31px;
+}
+section.LeaderShipCarousel .carousel-cell .card .card-body .card-text{
+    font-size: 21px;
+    line-height: 30px;
+    opacity: 0.8;
+}
+
+/********
+*********
+End About Page
+*********
+**********/
+
+
+/********
+*********
+GTE Page
+*********
+**********/
+section.GTE .PhotoDescription a{
+    text-decoration: none;
+}
+section.GTE .infromativeSliderAbout .card img{
+    width: 100%;
+}
+section.GTE .infromativeSliderAbout .card .CardHeight{
+    height: 60%;
+}
+section.GTE .infromativeSliderAbout .card .card-body{
+    min-height: unset;
+    height: 100%;
+}
+section.GTE .infromativeSliderAbout .card .card-body .card-text{
+    font-size: 20px;
+    font-weight: lighter;
+}
+section.GTE .infromativeSliderAbout{
+    height: unset;
+}
+/********
+*********
+End GTE Page
+*********
+**********/
+
+
+/********
+*********
+Royal Page
+*********
+**********/
+
+
+section.Royale .infromativeSliderAbout .card .CardHeight{
+    height: 75%;
+}
+section.Royale .infromativeSliderAbout .card .card-body{
+    min-height: unset;
+    height: 100%;
+}
+section.Royale .infromativeSliderAbout .card .card-body .card-text{
+    font-size: 20px;
+    font-weight: lighter;
+}
+section.Royale .infromativeSliderAbout{
+    height: unset;
+}
+/********
+*********
+End Royal Page
+*********
+**********/
+
+/***************************
+************Media *********
+****************************/
+@media (min-width: 991px){
+
+}
+@media (min-width: 768px){
+
+}
+@media (min-width: 991px){
+
+}
+@media (min-width: 768px){
+
+}
