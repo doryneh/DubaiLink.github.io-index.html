@@ -196,8 +196,10 @@ $('#carouselExampleSlidesOnly').carousel({
    interval: 100
  });
  $('#carouselDubai,#TextCarousel').carousel({
-   interval: 5000
+   interval: false
  });
+ $('.carousel').carousel('pause');
+
 });
 /********
  Control 2 carousel in Dubai Link by the same buttons

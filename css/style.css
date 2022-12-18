@@ -377,7 +377,7 @@ section.LandingPage .PhotoDescription h4.TitleDescription, .Map h4.TitleDescript
 }
 .PhotoDescription p.Description{
     font-size: 22px;
-    color: #2A7076;
+    color: #484848;
     line-height: 29px;
     opacity: 0;
 }
@@ -699,7 +699,7 @@ Dubai Link
     animation: none !important;
     transition: none !important;
     font-size: 22px;
-    color: #2A7076;
+    color: #484848;
     line-height: 29px;
 }
 
@@ -707,7 +707,7 @@ Dubai Link
     filter: brightness(0);
     width: 0px;
 }
-#TextCarousel .carousel-item p.Description:hover ,section.GTE p.Description:hover img{
+#TextCarousel .carousel-item p.Description:hover img ,section.GTE p.Description:hover img{
     width: 35px;
 }
 #carouselDubai .carousel-control-prev,#carouselDubai .carousel-control-next{
