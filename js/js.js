@@ -125,6 +125,7 @@ $(window).scroll(function () {
 
 
 /*Scroll Effect*/
+
 $(document).ready(function () {
 
    function PinkSeperatorAnim() {
@@ -133,7 +134,7 @@ $(document).ready(function () {
       for (var i = 0; i < reveals.length; i++) {
          var windowHeight = window.innerHeight;
          var elementTop = reveals[i].getBoundingClientRect().top;
-         var elementVisible = 150;
+         var elementVisible = 10;
 
          if (elementTop < windowHeight - elementVisible) {
             reveals[i].classList.add("animated");
@@ -189,13 +190,63 @@ jQuery('.MapIndex5').mouseleave(function () {
    jQuery('.DetailsSix').css({ "display": "none" });
 });
 
+/*****
+Time Line
+*********/
+var element = $(".GreenText2");
+var element2 = $(".GreenText3");
+var previous =$(".GreenText1")
+var elementOffset = element.offset().top;
+var elementOffset2 = element2.offset().top;
+var previousOffset = previous.offset().top;
+var windowHeight = $(window).height();
+   var windowScroll = $(window).scrollTop();
+$(window).scroll(function() {
+  
+
+   
+ 
+   if (elementOffset < windowHeight + windowScroll) {
+     setTimeout(function() {
+       element.addClass("GreenText");
+       previous.removeClass("GreenText");
+
+     }, 3000);
+   }
+   else{
+      element.removeClass("GreenText");
+      previous.addClass("GreenText");
+
+   }
+   if (elementOffset2 < windowHeight + windowScroll) {
+      setTimeout(function() {
+        element2.addClass("GreenText");
+        element.removeClass("GreenText");
+ 
+      }, 6000);
+    }
+    else{
+       element2.removeClass("GreenText");
+       previous.addClass("GreenText");
+ 
+    }
+    if (previousOffset < windowHeight + windowScroll) {
+      setTimeout(function() {
+        previous.addClass("GreenText");
+        element2.removeClass("GreenText");
+ 
+      }, 9000);
+     
+    }
+    
+ });
 
 /*Carousel Brands slide time*/
 $(document).ready(function() {
 $('#carouselExampleSlidesOnly').carousel({
    interval: 100
  });
- $('#carouselDubai,#TextCarousel').carousel({
+ $('#carouselDubai,#TextCarousel,#TextCarouselNIU,#carouselNIU').carousel({
    interval: false
  });
  $('.carousel').carousel('pause');
@@ -211,6 +262,14 @@ $('#carouselExampleSlidesOnly').carousel({
  $('#Prev').on('click', function(e) {
    e.preventDefault()
    $('#TextCarousel').carousel('next')
+ })
+ $('#NextNIU').on('click', function(e) {
+   e.preventDefault()
+   $('#TextCarouselNIU').carousel('prev')
+ })
+ $('#PrevNIU').on('click', function(e) {
+   e.preventDefault()
+   $('#TextCarouselNIU').carousel('next')
  })
 /********
 Hide and show the page content depending on the carousel

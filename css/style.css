@@ -3,8 +3,11 @@
     src: url(../fonts/Neris/Neris-Light.otf);
 
 }
+@font-face {
+    font-family: Neris;
+    src: url(../fonts/Neris/Neris-Black.otf);
 
-
+}
 
 
 @keyframes circle-in-top-right {
@@ -44,6 +47,10 @@ body {
 }
 .WhiteBodyBg{
     background-color: white !important;
+}
+.GreenText{
+    color: #00808B !important;
+    font-weight: bolder;
 }
 /********
 *********
@@ -183,7 +190,7 @@ section.CarouselPart .carousel .carousel-inner .carousel-item .carouselImageText
 section.CarouselPart .carousel .carousel-inner .carousel-item .carouselImageText h1 {
     font-size: 70px;
     text-transform: uppercase;
-    line-height: 89px;
+    line-height: 70px;
     font-weight: 500;
     animation: fadeIn 5s;
 
@@ -353,7 +360,11 @@ Landing Page Contnet
 }
 
 #carouselExampleSlidesOnly .carousel-inner .carousel-item .col-md-2 img {
-    filter: brightness(50%);
+    filter: grayscale(100%);
+}
+
+#carouselExampleSlidesOnly .carousel-inner .carousel-item .col-md-2:hover img {
+    filter: grayscale(0%);
 }
 
 /*End Brand Carousel */
@@ -366,7 +377,7 @@ section.LandingPage .PhotoDescription ,section.DubaiLink .PhotoDescription{
 section.LandingPage .PhotoDescription h4.TitleDescription, .Map h4.TitleDescription, section.DubaiLink .PhotoDescription  h4.TitleDescription,section.DubaiLink  .PhotoDescriptionNoAnim    h4.TitleDescription {
     font-size: 40px;
     font-weight: bold;
-    color: #2A7076;
+    color: #00808B;
     text-transform: uppercase;
     line-height: 50px;
     opacity: 0;
@@ -387,8 +398,8 @@ section.LandingPage .PhotoDescription img {
 }
 
 .animated {
-    animation: fadeInUp 0.2s linear;
-    transition: 0.1s ease all;
+    animation: fadeInUp 0.5s linear;
+    transition: 1s ease all;
     opacity: 1 !important;
 }
 
@@ -455,11 +466,14 @@ section.LandingPage .infromativeSlider .carousel-cell .overlay img {
 
 section.LandingPage .infromativeSlider .carousel-cell a.MoreDetails {
     position: absolute;
-    left: 5%;
-    bottom: 10%;
-    background-color: transparent;
+    left: 0%;
+    bottom: 0%;
+    background-image: linear-gradient(  #00000000, #000000);
     text-decoration: none;
     width: 100%;
+    padding: 40px;
+    border-radius: 12px;
+
 }
 
 section.LandingPage .infromativeSlider .carousel-cell:hover a.MoreDetails button div {
@@ -489,12 +503,15 @@ section.LandingPage .infromativeSlider .carousel-cell a.MoreDetails button {
     position: relative;
     padding: 0;
     text-align: left;
-    width: 25%;
+    width: 100%;
+    display: flex;
+    justify-content: start;
+    align-items: center;
 }
 
 section.LandingPage .infromativeSlider .carousel-cell a.MoreDetails button div {
-    width: 5px;
-    height: 5px;
+    width: 0px;
+    height: 0px;
     background-color: white;
     border-radius: 50%;
     margin-right: 15px;
@@ -502,10 +519,7 @@ section.LandingPage .infromativeSlider .carousel-cell a.MoreDetails button div {
     display: flex;
     justify-content: center;
     align-items: center;
-    position: absolute;
-    left: 75%;
-    top: 60%;
-    transform: translate(-50%, -50%);
+    margin-left: 20px;
 }
 
 section.LandingPage .infromativeSlider .carousel-cell a.MoreDetails button div svg {
@@ -679,15 +693,15 @@ End Landing Page Contnet
 Dubai Link 
 *********
 **********/
-#TextCarousel{
+#TextCarousel,#TextCarouselNIU{
     position: absolute;
     top: 25%;
-    right: 10%;
+    right: 0%;
     height: 100%;
     width: 50%;
 }
 
-#TextCarousel .carousel-item{
+#TextCarousel .carousel-item,#TextCarouselNIU .carousel-item{
     background-color: white;
     padding: 35px;
     width: 100%;
@@ -695,41 +709,50 @@ Dubai Link
     filter:drop-shadow(0px 3px 6px #81818129);
     height: 700px;
 }
-#TextCarousel .carousel-item p.Description{
+#TextCarousel .carousel-item p.Description,#TextCarouselNIU .carousel-item p.Description{
     animation: none !important;
     transition: none !important;
     font-size: 22px;
     color: #484848;
     line-height: 29px;
+    
 }
 
-#TextCarousel .carousel-item p.Description img,section.GTE p.Description img{
+p.Description img{
     filter: brightness(0);
     width: 0px;
 }
-#TextCarousel .carousel-item p.Description:hover img ,section.GTE p.Description:hover img{
-    width: 35px;
+p.Description:hover img{
+    width: 25px !important;
 }
-#carouselDubai .carousel-control-prev,#carouselDubai .carousel-control-next{
+p.Description span{
+    color: #E53B5F;
+    display: none;
+}
+p.Description:hover span{
+    display: inline-block;
+}
+
+#carouselDubai .carousel-control-prev,#carouselDubai .carousel-control-next,#carouselNIU .carousel-control-prev ,#carouselNIU .carousel-control-next{
     height: fit-content ;
-    left: 70%;
+    left: 95%;
     width: 20%;
     opacity: 1 !important;
     z-index: 100;
 }
 
-#carouselDubai .carousel-control-prev{
+#carouselDubai .carousel-control-prev ,#carouselNIU .carousel-control-prev{
     top: 90%;
 
 }
-#carouselDubai .carousel-control-next{
+#carouselDubai .carousel-control-next,#carouselNIU .carousel-control-next{
     top: 75%;
 }
-section.DubaiLink .PhotoDescriptionNoAnim h3.SubTitle{
+ h3.SubTitle{
     font-size: 25px;
     line-height: 34px;
     color: #00808B;
-    font-weight: bold;
+    font-weight: bolder;
 
 }
 section.DubaiLink .PhotoDescription .servicesCarousel {
@@ -739,7 +762,7 @@ section.DubaiLink .PhotoDescription .servicesCarousel img{
     width: 50%;
 
 }
-#carouselDubai .carousel-item,#TextCarousel .carousel-item{
+#carouselDubai .carousel-item,#TextCarousel .carousel-item, #carouselNIU .carousel-item,#TextCarouselNIU .carousel-item{
     transition: 0.3s ease all;
 }
 /********
@@ -768,11 +791,10 @@ section.CarouselPart #AboutCarousel #carousel-item-one{
     padding-bottom: 20px;
 }
 .infromativeSliderAbout .carousel-cell {
-    width: 24%;
+    width: 30%;
     margin-right: 10px;
     border-radius: 5px;
     counter-increment: carousel-cell;
-    height: 450px;
 }
   .infromativeSliderAbout .position-relative{
     height: 20% !important;
@@ -781,36 +803,32 @@ section.CarouselPart #AboutCarousel #carousel-item-one{
     display: none;
   }
   .infromativeSliderAbout .card {
-    background-color: transparent;
+    background-color: white;
     border-radius: 12px;
     filter: drop-shadow(0px 3px 6px #81818129);
     border: none;
-    
+    border-radius: 12px;
+
   }
   .infromativeSliderAbout .card .card-body{
     background-color: white;
     text-align: center;
-    border-radius: 12px;
-    margin-top: 100px;
     height: 100%;
-    padding-bottom: 40px !important;
+    border-radius: 12px;
   }
   .infromativeSliderAbout .card .imgbg{
-    width: 35%;
+    width: 100%;
     background-color: transparent;
     margin: auto;  
-    border-radius: 5px;
-    position: absolute;
-    left: 50%;
-    top: 35px;
-    transform: translateX(-50%);
-    filter: drop-shadow(unset);
+    display: flex;
+    border-radius: 12px;
+
+    background-color: white;
 }
   .infromativeSliderAbout .card img{
-    width: 70%;
+    width: 35%;
     border-radius: 5px;
-    filter: drop-shadow(unset);
-
+margin: auto;
   }
   .infromativeSliderAbout  .card .card-body .card-title{
     color: #00808B;
@@ -864,18 +882,18 @@ End About Page
 GTE Page
 *********
 **********/
-section.GTE .PhotoDescription a{
-    text-decoration: none;
+ .PhotoDescription a{
+    text-decoration: none !important;
 }
 section.GTE .infromativeSliderAbout .card img{
-    width: 100%;
+    width: 25%;
 }
 section.GTE .infromativeSliderAbout .card .CardHeight{
     height: 60%;
 }
 section.GTE .infromativeSliderAbout .card .card-body{
     min-height: unset;
-    height: 100%;
+    height: unset;
 }
 section.GTE .infromativeSliderAbout .card .card-body .card-text{
     font-size: 20px;
@@ -903,7 +921,7 @@ section.Royale .infromativeSliderAbout .card .CardHeight{
 }
 section.Royale .infromativeSliderAbout .card .card-body{
     min-height: unset;
-    height: 100%;
+    height: unset;
 }
 section.Royale .infromativeSliderAbout .card .card-body .card-text{
     font-size: 20px;
@@ -917,6 +935,74 @@ section.Royale .infromativeSliderAbout{
 End Royal Page
 *********
 **********/
+
+/*********
+STS
+**********/
+section.STS .PhotoDescription p.Description{
+    font-size: 20px;
+}
+section.STS .card{
+    border: none;
+    border-radius: 12px ;
+    filter: drop-shadow(0px 3px 6px #81818129);
+    height: 231px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+/*********
+End STS 
+***********/
+
+/*********
+Tripstick
+***********/
+section.Tripstik  .PhotoDescription .card{
+    border: none;
+    border-radius: 12px;
+    filter: drop-shadow(0px 3px 6px #81818129);
+    min-height: 324px;
+}
+section.Tripstik  .PhotoDescription .card .card-title{
+    color: #E53B5F;
+    font-size: 100px;
+    text-shadow: 0px 3px 6px #00000029;
+    line-height: 134px;
+    font-size: bolder;
+    font-family: Neris;
+}
+section.Tripstik  .PhotoDescription .card .card-text{
+    color: #E53B5F;
+    font-size: 25px;
+    line-height: 34px;
+    font-weight: bolder;
+}
+section.Tripstik  .PhotoDescription .card .card-details{
+    color: #484848;
+    font-size: 25px;
+    line-height: 34px;
+    font-weight: bolder;
+
+}
+
+
+
+/*********
+End Tripstick
+***********/
+
+
+/*********
+ NIU
+***********/
+section.NIU   iframe{
+    height: 80vh;
+    width: 100%;
+}
+/*********
+End NIU
+***********/
 
 /***************************
 ************Media *********
